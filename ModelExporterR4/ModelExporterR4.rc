@@ -1,0 +1,328 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_PANEL DIALOG DISCARDABLE  0, 0, 108, 246
+STYLE WS_CHILD | WS_VISIBLE
+FONT 8, "MS Sans Serif"
+BEGIN
+    CTEXT           "S2 Games\n\n.model exporter v10",IDC_STATIC,6,7,95,26
+    GROUPBOX        "Geometry options",IDC_STATIC,6,82,95,59
+    CONTROL         "Ignore Physique",IDC_IGNORE_PHYSIQUE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,13,97,81,15
+    PUSHBUTTON      "Export...",IDC_EXPORT,13,150,79,21
+    PUSHBUTTON      "Close",IDC_CLOSE,23,207,57,10
+    PUSHBUTTON      "Scene Info...",IDC_SCENE_INFO,15,40,76,12
+    PUSHBUTTON      "Help...",IDC_HELPINFO,15,58,76,12
+    PUSHBUTTON      "Export Animation Only...",IDC_EXPORT_ANIMATION,12,177,
+                    82,17
+    CONTROL         "Remove Heirarchy",IDC_LINK_TO_ROOT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,13,116,81,15
+    CONTROL         "Show Debug Info",IDC_DEBUG_INFO,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,11,226,94,16
+END
+
+IDD_OBJECT_SETTINGS DIALOG DISCARDABLE  0, 0, 192, 140
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Object Settings"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,135,119,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,76,119,50,14
+    LTEXT           "Object name:",IDC_STATIC,22,30,46,11
+    EDITTEXT        IDC_OBJECT_NAME,80,29,87,12,ES_AUTOHSCROLL
+    COMBOBOX        IDC_CATEGORY,77,75,95,71,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Editor settings",IDC_STATIC,6,59,179,55
+    LTEXT           "Category:",IDC_STATIC,22,76,46,11
+    LTEXT           "Scale Range:",IDC_STATIC,22,96,50,13
+    CONTROL         "",IDC_SCALE_RANGE_LOW,"CustEdit",WS_TABSTOP,77,95,26,11
+    CONTROL         "",IDC_SCALE_RANGE_LOW_SPIN,"SpinnerControl",0x0,104,95,
+                    10,11
+    CONTROL         "",IDC_SCALE_RANGE_HIGH,"CustEdit",WS_TABSTOP,134,95,26,
+                    11
+    CONTROL         "",IDC_SCALE_RANGE_HIGH_SPIN,"SpinnerControl",0x0,161,95,
+                    10,11
+    LTEXT           "to",IDC_STATIC,121,96,8,8
+    GROUPBOX        "Game Settings",IDC_STATIC,6,14,176,38
+END
+
+IDD_SCENE_INFO DIALOG DISCARDABLE  0, 0, 341, 226
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION
+CAPTION "Scene Info"
+FONT 8, "Courier New"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,284,205,50,14
+    EDITTEXT        IDC_DETAILS,7,7,327,191,ES_MULTILINE | ES_AUTOHSCROLL | 
+                    ES_READONLY | WS_VSCROLL | WS_HSCROLL
+END
+
+IDD_STATUS_BAR DIALOG DISCARDABLE  0, 0, 272, 49
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_VISIBLE
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "blahblah",IDC_STATUS_MESSAGE,7,7,258,12
+    CONTROL         "Progress1",IDC_PROGRESS,"msctls_progress32",PBS_SMOOTH,
+                    7,23,258,7
+    RTEXT           "Static",IDC_SECONDARY_STATUS_MESSAGE,7,34,132,10
+    CONTROL         "Progress1",IDC_PROGRESS2,"msctls_progress32",WS_BORDER,
+                    147,36,118,6
+END
+
+IDD_HELP DIALOG DISCARDABLE  0, 0, 340, 238
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "S2 Model Exporter Help"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,283,217,50,14
+    LTEXT           "NODE PREFIX REFERENCE:\n\n\n_surf\n\n   This object specifies a collision surface and must be convex.\n\n_bone\n\n   This object represents a ""reference bone"" (a placeholder object for the game to use).  The most common use for this is to specify a weapon placeholdE?",
+                    IDC_STATIC,7,7,326,201
+END
+
+IDD_EXPORT_OPTIONS DIALOG DISCARDABLE  0, 0, 242, 91
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Export Options"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,185,70,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,120,70,50,14
+    CONTROL         "Export animation clip (.clip file)",
+                    IDC_EXPORT_ANIMATION,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,5,228,19
+    CONTROL         "Copy textures",IDC_EXPORT_TEXTURES,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,25,228,19
+    CONTROL         "Save game / editor object settings (.objdef file)...",
+                    IDC_SAVE_OBJDEF,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,
+                    46,228,19
+END
+
+IDD_DIALOG2 DIALOG DISCARDABLE  0, 0, 366, 249
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,309,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,309,24,50,14
+END
+
+IDD_MODEL_ERRORS DIALOG DISCARDABLE  0, 0, 276, 111
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION
+CAPTION "Error Log"
+FONT 8, "Arial"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,219,90,50,14
+    EDITTEXT        IDC_DETAILS,7,7,262,76,ES_MULTILINE | ES_AUTOHSCROLL | 
+                    ES_READONLY | WS_VSCROLL | WS_HSCROLL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_PANEL, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        RIGHTMARGIN, 101
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 239
+    END
+
+    IDD_OBJECT_SETTINGS, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        RIGHTMARGIN, 185
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 133
+    END
+
+    IDD_SCENE_INFO, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 334
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 219
+    END
+
+    IDD_STATUS_BAR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 265
+        TOPMARGIN, 7
+    END
+
+    IDD_HELP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 333
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 231
+    END
+
+    IDD_EXPORT_OPTIONS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 235
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 84
+    END
+
+    IDD_DIALOG2, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 359
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 242
+    END
+
+    IDD_MODEL_ERRORS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 269
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 104
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 3,0,0,0
+ PRODUCTVERSION 3,0,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileVersion", "4.0.0.0\0"
+            VALUE "InternalName", "ModelExporterR4\0"
+            VALUE "LegalCopyright", "\0"
+            VALUE "OriginalFilename", "ModelExporterR4.dlu\0"
+            VALUE "ProductName", "3ds max\0"
+            VALUE "ProductVersion", "4.0.0.0\0"
+            VALUE "FileDescription", "S2 Games model exporter\0"
+            VALUE "Comments", "TECH: \0"
+            VALUE "LegalTrademarks", "3D Studio MAX, Biped, Character Studio, Heidi, Kinetix and Physique are registered trademarks and 3ds max, combustion, Discreet, DWG Unplugged, DXF, FLI and FLC are trademarks of Autodesk, Inc.\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_OBJECT_SETTINGS DLGINIT
+BEGIN
+    IDC_CATEGORY, 0x403, 5, 0
+0x6574, 0x7473, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_LIBDESCRIPTION      "S2 Games model exporter dev2"
+    IDS_CATEGORY            "S2 Games plugins"
+    IDS_CLASS_NAME          "ModelExporterR4 dev2"
+    IDS_PARAMS              "Parameters"
+    IDS_SPIN                "Spin"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

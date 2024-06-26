@@ -1,0 +1,4 @@
+EXPORTS
+	InitGameDLL
+	CL_InitAPIs
+	INT_InitAPIs

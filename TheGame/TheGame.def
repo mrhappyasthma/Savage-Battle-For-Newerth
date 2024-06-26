@@ -1,0 +1,6 @@
+EXPORTS
+	InitGameDLL
+	ShutdownGameDLL
+	CL_InitAPIs
+	SV_InitAPIs
+	INT_InitAPIs

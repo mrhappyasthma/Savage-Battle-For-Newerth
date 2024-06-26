@@ -1,0 +1,2 @@
+#define COOKIE_SIZE 6
+#define VERSION0_COOKIE_SIZE 10
